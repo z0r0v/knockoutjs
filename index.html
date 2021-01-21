@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ko</title>
+</head>
+<body>
+    <div class="first" data-bind="text: greeteng"></div>
+    <input type="text" data-bind="textInput: textInput">
+    <p data-bind="text: textInput"></p>
+
+    <button data-bind="visible: isVisible">Click me!</button>
+
+    <p class="displayed" data-bind="visible: isVidible2">If click i'm don't vivible</p>
+    <button data-bind="click: handlerIsVisibleClick">Click tu vivible!</button>
+
+    <script src="knockout-3.5.1.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
