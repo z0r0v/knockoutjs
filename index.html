@@ -6,14 +6,37 @@
     <title>ko</title>
 </head>
 <body>
-    <div class="first" data-bind="text: greeteng"></div>
-    <input type="text" data-bind="textInput: textInput">
-    <p data-bind="text: textInput"></p>
+    <div class="first-block">
+        <div class="first" data-bind="text: greeteng"></div>
 
-    <button data-bind="visible: isVisible">Click me!</button>
+        <label for="input-replay">input-replay to p and log</label>
+        <input id="input-replay" type="text" data-bind="textInput: textInput">
+        <p data-bind="text: textInput"></p>
+    
+        <button data-bind="visible: isVisible">Click me! to time out</button>
+    
+        <p class="displayed" data-bind="visible: isVidible2">If click i'm don't vivible</p>
+        <button data-bind="click: handlerIsVisibleClick">Click tu triggerVisible!</button>
+     
+        <button data-bind="click: function() { alert(123) }">Click Alert 123</button>
+    
+        <button data-bind="click: function(viewModel) { viewModel.isVidible2(true); console.log(this)}">isVidible2(true) and log this</button>
+    
+        <p data-bind="visible: isVisibleLorem">Lorem 
+            ipsum dolor sit amet consectetur adipisicing elit. Fugit ea ducimus quaerat odit aut neque cupiditate nobis dicta distinctio facilis asperiores voluptatem itaque delectus eu
+            m commodi sequi impedit, architecto unde?
+        </p>
+        <button data-bind="click: function(viewModel) {this.isVisibleLorem(true)}">this.isVisibleLorem(True)</button>
+    </div>
 
-    <p class="displayed" data-bind="visible: isVidible2">If click i'm don't vivible</p>
-    <button data-bind="click: handlerIsVisibleClick">Click tu vivible!</button>
+
+    <div class="seccond-block">
+        <input type="text" data-bind="textInput: firstName">
+        <input type="text" data-bind="textInput: lastName">
+         <p data-bind="text: firstNameLastName"></p>
+    </div>
+
+
 
     <script src="knockout-3.5.1.js"></script>
     <script src="index.js"></script>

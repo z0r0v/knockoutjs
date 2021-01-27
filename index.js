@@ -1,13 +1,21 @@
+
 const viewModel = {
+    //first block
     greeteng:ko.observable('Hello World'),
     textInput: ko.observable(''),
     textP: ko.observable(''),
     isVisible: ko.observable(false),
     isVidible2: ko.observable(true),
+    isVisibleLorem: ko.observable(false),
+
+    //seccond block
+    firstName: ko.observable(''),
+    lastName: ko.observable(''),
+    firstNameLastName: 'тут нужно компьютед'
 }
 
 // bind к конкретному месту
-// ko.applyBindings(viewModel, document.querySelector('.first'));
+// ko.applyBindings(viewModel, document.querySelector('.first-block'));
 
 // bind ко всему документу
 ko.applyBindings(viewModel);
@@ -26,3 +34,9 @@ function handlerIsVisibleClick() {
 viewModel.textInput.subscribe((nevValue)=>{
     console.log(nevValue);
 })
+
+
+
+
+
+
